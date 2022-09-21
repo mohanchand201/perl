@@ -1,0 +1,65 @@
+perl : 
+
+1. variables 
+
+
+
+2. data types 
+
+3. flow control [ loops ] 
+
+4. regex 
+
+5. functions 
+
+6. file operations 
+
+7. modules [ DBI ,DBD ]
+
+8. OOPS 
+ 
+
+add(1,2) --> return ; XXXX 
+
+shebang rule : 
+
+#!/usr/bin/perl
+#!/usr/bin/sh
+#!/usr/bin/python 
+
+termianl --> shell [ default ] 
+
+one terminal can have any no of shells 
+
+tcsh bash zsh [ POSIX compliant shells ] 
+
+
+\n --> new line 
+\t --> tab 
+
+1. scalars  $ 
+2. arrays @ 
+3. Map/ Hash % 
+
+key value pairs 
+
+my $x = "mohan chand" ; 
+
+my @newarray = ("mohan","chand","narendra","abhi" ) ;  # list of scalars 
+
+my @newarray = qq(mohan,chand,narendra,abhi) ; 
+
+// sid hostname 
+
+my %db = ( "csrdb01" => "csrdb01.vuc" , "smsdb01s" => "smsdb01.vmuc", "ddb02" => "newdev" ,"ddb03" => "newdev" ) ;
+
+// get the hostname of csrdb01 
+
+$db{'csrdb01'} ; 
+
+//for $x in <arrayname or hash name> 
+	
+	for(keys %db)
+	{
+		print("\n the key is $_ and the value is $db{$_} ") ;
+	} 
