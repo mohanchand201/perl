@@ -1,0 +1,72 @@
+# #!/usr/bin/perl -w
+
+ use strict ;
+sub seperate_output()
+{
+    print("\n","-" x 115,"\n") ;
+    return ;
+}
+
+# # my @array1 = ( 1,2,2,4,4,4,4) ;
+# # my @array2 = qq(sun,mon,tue,wed) ;
+# # my @array3 = ("sun","mon","tuye" );
+
+# # print("\nthe array is @array3");
+# # my $size1 = scalar @array3 ;
+# # my $size2 =  @array1 ;
+# # print("\n the size of the array1 is ",$size1) ;
+# my @array1 = (1,2,3,4,5,6) ;
+#       # index 0,1,2,3,4,5
+# # print("the last  element of array1 is", @array1[-1]);
+# #  get the highest index of an array
+
+# seperate_output ;
+
+# print("the highest index is $#array1") ;
+
+=pod
+
+array as stack : push , pop  : GLASS PRINCIPLE
+
+array as queue : unshift,pop : BANK PRINCIPLE
+
+=cut
+
+my @array1 =() ;
+# array as queue
+
+unshift(@array1,"mohan" );
+unshift(@array1,"chandra");
+unshift(@array1,"chandrakanth");
+unshift(@array1,"surya");
+
+seperate_output ;
+
+
+print("the array is @array1 ") ;
+
+
+
+# my @array1 = () ;
+
+# push(@array1,"1stele") ;
+# push(@array1,"2ndele");
+# push(@array1,"3rdele");
+
+# my $element = pop(@array1) ;
+
+
+# print("the popped out element is ", $element); # 3rd elel
+
+# print("\n the array after pop is @array1");
+
+
+#!/usr/bin/perl
+
+my @array1 = qw(oranges,apples,eggs) ;
+
+print("the array before sorting is @array1") ;
+
+my @sorted_array = sort{$a<=>$b} @array1 ;
+
+print("\n the array after sorting is ",@array1) ;
