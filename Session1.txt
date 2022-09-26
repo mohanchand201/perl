@@ -57,8 +57,14 @@ my %db = ( "csrdb01" => "csrdb01.vuc" , "smsdb01s" => "smsdb01.vmuc", "ddb02" =>
 
 $db{'csrdb01'} ; 
 
-//for $x in <arrayname or hash name> 
+//for $x ( <arrayname or hash name> ) --> general iteration logic 
+// iterating arrays 
+for $x (@array)
+{
 	
+}
+// iterating hash 
+
 	for(keys %db)
 	{
 		print("\n the key is $_ and the value is $db{$_} ") ;
