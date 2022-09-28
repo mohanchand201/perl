@@ -1,0 +1,158 @@
+#!/usr/bin/perl
+sub seperate()
+{
+    print("\n","---"x10,"\n");
+}
+=pod
+Map or hash data structutre
+
+the values in map are stored as key and value pairs
+
+keys must be unique
+=cut
+
+%db_hash = ("ddb02"=>"newdev","ddb03"=>"newdev","ddb04"=> "staging02.bna","csrdb01"=>"csrdb01.vgs") ;
+
+for(keys %db_hash)
+{
+    my $key = $_ ;
+    my $value = $db_hash{$key};
+    printf("\n the value for %s is %s ",$key,$value);
+
+}
+seperate();
+
+# add a value to the hash
+
+$db_hash{"entice1s"} = "enticedb01.vmuc" ;
+print "\n the hash  after adding to the hash \n ";
+for(keys %db_hash)
+{
+    my $key = $_ ;
+    my $value = $db_hash{$key};
+    printf("\n the value for %s is %s ",$key,$value);
+}
+seperate();
+
+# delete a value from hash
+
+delete $db_hash{"ddb03"};
+
+print "\n the hash  after deleting from the hash \n ";
+for(keys %db_hash)
+{
+    my $key = $_ ;
+    my $value = $db_hash{$key};
+    printf("\n the value for %s is %s ",$key,$value);
+}
+
+seperate();
+
+# check if a key value pair  is present in the hash
+
+if(exists($db_hash{"ddb02"}))
+{
+    print "\n the data is present in hash \n " ;
+}
+else
+{
+    print "\n data is not present in hash \n";
+
+}
+
+
+
+my $answer1 = ( 0 == 1 ) or ( 0 == 1 ) or ( 1 == 1 ) or print "\n the staemnet reachers here\n" ;
+
+if(( 0 == 1 ) or ( 0 == 1 ) or ( 1 == 1 ) or print "\n the staemnet reachers here\n")
+{
+    print "abhishek " ;
+}
+
+
+my $answer2 = ( 0 == 1 ) or ( 0 == 1 ) or ( 1 == 1 ) and print "\n the staemnet reachers here\n" ;
+
+
+read -sp "enter the year : " year ;
+
+while [ -- <> -- ];
+{
+    // block to be executed
+
+    // loop break condition
+}
+
+start=0; 0...10
+end = 10 ;
+
+while(start <= end)
+{
+		if( start%2 == 0)
+		{
+			print "\n the number $start is even ";
+		}
+		else
+		{
+			print "\n the number $start is odd ";
+		}
+start = start + 1 ;
+}
+
+
+while [
+
+0<=10 ==> 0%2 == 0 (true ) even ;
+1<=10 ==> 1%2 == 0 (false  ) odd  ;
+2<=10 ==> 2%2 == 0 (true  ) even   ;
+.
+.
+.
+.
+10<=10 ==> 10%2 ==0 ( true ) even ;
+
+11<10 false loop break
+
+2)7( 3
+  6
+----
+  1
+
+7/2 --> 3
+7%2 --> 1
+`date -d "$startdate" +%A`  == "Monday"
+
+my $answer1 = ( 0 == 1 ) or ( 0 == 1 ) or ( 1 == 1 ) or print "\n the staemnet reachers here\n" ;
+
+if(( 0 == 1 ) or ( 0 == 1 ) or ( 1 == 1 ) or print "\n the staemnet reachers here\n")
+{
+    print "abhishek " ;
+}
+
+
+my $answer2 = ( 0 == 1 ) or ( 0 == 1 ) or ( 1 == 1 ) and print "\n the staemnet reachers here\n" ;
+
+
+
+
+======= ASSIGNMENTS ===============
+
+
+WAP == write a program
+
+1. WAP to list all the files in a directory and the o/p should be as follows
+
+-- sample o/p
+
+the file name is <filename>
+the directory name is <directory>
+the link name is <link>
+
+2. WAP to list all the files older than 20 days
+3. WAP to list all the files older than a specific no of days
+4. WAP to list all the files older than a specific date
+
+read the year from user and print the dates of all mondays
+
+
+
+
