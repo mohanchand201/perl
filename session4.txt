@@ -16,3 +16,41 @@ while getopts ":a:d:f:" opt; do
 done
 
 echo -e "THE ARGS IS $ARGS ";
+
+
+
+1) 
+print "\n my age is 23.25 yrs " ; 
+
+2) 
+$age=23.25;
+print "\n my age is $age yrs " ; 
+
+3) 
+$age=23.25;
+printf( "\n my age is %f ", $age ); // 23.25 
+printf( "\n my age is %.1f ", $age ); //23.2
+
+
+./R2DB -Dlogging.config=./conf/logback.xml -Dspring.config.location=./conf/application.yml
+
+java -jar <jarfilename> 
+// maven or gradle  build tools ==> 
+
+./deploy.sh  -f <filename> -a deploy -d ddb 
+
+#options are stored in deploy.sh ARGS variable 
+
+ARGS="-f <filename> -a deploy -d ddb "
+
+# gradle wrapper is executed at the end of deploy.sh 
+/home/hyddba/R2DB/bin/R2DB $ARGS  -- wrapper execution 
+
+java -jar R2DB-1.0.jar $ARGS [ runs this internally ]  -- manual execution
+
+
+zip -r temp.zip temp/
+
+java --> jar --> maven/gradle 
+
+ 
