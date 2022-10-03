@@ -1,0 +1,44 @@
+#!/usr/bin/perl
+
+use DBI ;
+
+
+# prepare a dsn ;
+
+my $dsn = "DBI:mysql:database=mysql;host=dbutil.prod.untd.com;port=3306";
+my $username = "root" ;
+my $password = "tra2lemia" ;
+# prepare a database handle
+
+my $dbh = DBI->connect($dsn,$username,$password,{ RaiseError => 1 }) or die $DBI::errstr;
+
+print "\n database opened successfully ";
+
+my $sql = "select user,password,host from mysql.user  ";
+
+# prepare a statement handle
+
+my $sth = $dbh->prepare($sql) or die "unable to prepare $sql $DBI:errstr" ;
+
+my $rv = $dbh->do("create table mohan");
+#my $rv = $dbh->do("insert into mohan values .....");
+if($dbh->do(".... . "))
+{
+        print "\n table creaeted sucecsfully ";
+}
+else
+{
+        die "table creation failed ";
+}
+$sth->execute();
+while (my ($x,$y,$z) = $sth->fetchrow_array())
+{
+        print "\n $x , $y , $z " ;
+}
+
+# close all the handles
+$sth->finish();
+$dbh->disconnect();
+print "\n operation ended ";
+print "\n" ;
+
