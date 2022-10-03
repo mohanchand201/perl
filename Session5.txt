@@ -42,3 +42,44 @@ $dbh->disconnect();
 print "\n operation ended ";
 print "\n" ;
 
+
+
+
+
+#!/usr/bin/perl
+opendir( my $dir, "/home/tmohan") or die "Cannot open directory: $!";
+my @files = readdir $dir;
+for $x (@files)
+{
+        ( -f $x ) and print "\n the filename is $x ";
+        ( -d $x ) and print "\n the directory is $x ";
+        ( -l $x ) and print "\n the liunk is $x ";
+#       printf("\n the filename is : $x \n");
+}
+print "\n" ;
+printf("the directory is : $dir");
+print "\n";
+
+
+
+
+// sample dsn's 
+
+my $driver  = "Pg"; 
+my $database = "testdb";
+my $dsn = "DBI:$driver:dbname=$database;host=;port = 5432";
+my $userid = "postgres";
+my $password = "pass123";
+
+my $dsn1 = "DBI:oracle:sid=bsqa01;host=portaldb11qa.vgs.qa.untd.com;port=1521" ; 
+my $dsn2 = "DBI:mysql:database=poseidon;host=dbutil.prod.untd.com;port=3306" ; 
+my $dsn3 = "DBI:Pg:database=testdb;host=10.103.34.20;port=5432" ;
+
+
+
+
+// sample database handles 
+my $dbh = DBI->connect($dsn, $userid, $password, { RaiseError => 1 }) or die $DBI::errstr;
+
+
+
