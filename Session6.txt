@@ -1,0 +1,77 @@
+#!/usr/bin/perl
+
+use Switch ;
+
+my $input = 0 ;
+my @optionlist = (1,"mohan","uol");
+my @mysqlqa =("zcastdb01","zcastdb02") ;
+my $username;
+my $password;
+while($input == 0)
+{
+        print "\n enter ur choice : " ;
+        $input = <STDIN> ;
+        chomp($input) ;
+        switch($input)
+        {
+                case 0 { print "\n u have choosen 0st option " ; $input=0; }
+                case 1 { print "\n u have choosen 1st option " ; $input=0; next ;}
+                case 2 { print "\n u have choosen 2st option " ; } #$input=0;  }
+                case (\@optionlist) { print "\n the option is present in optionlist "; $input=0 ; }
+                case (\@mysqlqa) { $username = "root" ;$password = "empala64" ; $input=0 ;}
+#               case (\@mysqlprod) { my $username = "root" ; my $password = "tra2lemia"  }
+
+                else { print "\n signing off " ; last;}
+        }
+        if($username) { print "\n the username,password is $username,$password " ;}
+
+}
+
+my $choice = 0 ; 
+
+# STDIN STDERR STDOUT 
+=pod
+while($choice == 0 )
+{
+	print "\n enter ur choice : " ; 
+	$choice = <STDIN> ; 
+	chomp($choice) ;
+	if($choice != 0)
+	{
+		print "\n exitting the loop " ; 
+		last ;
+	}
+	else
+	{
+		print "going to another iteration "
+	}
+}
+
+my $iteration = 0 ; 
+my $max_iteration = 5 ; 
+while($iteration < $max_iteration)
+{
+	print "\n checking for $iteration time " ; 
+	$iteration = $iteration + 1 ; 
+}
+
+=cut 
+
+use Switch ;
+
+my $input = 0 ; 
+while($input == 0)
+{
+	print "\n enter ur choice : " ; 
+	$input = <STDIN> ; 
+	chomp($input) ;
+	switch($input)
+	{
+		case 0 { print "\n u have choosen 0st option " ; $input=0;}
+		case 1 { print "\n u have choosen 1st option " ; $input=0; }
+		case 2 { print "\n u have choosen 2st option " ; } #$input=0;  }
+		else { last;}
+	}
+	
+	
+}
