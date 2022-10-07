@@ -1,0 +1,112 @@
+implement below features for a portal application 
+
+## mysql database 
+
+[tmohan@cs2 ~]$ mysql -u root -pT3st123 -h 10.103.34.94
+
+## feature 1 
+
+[tmohan@cs2 ~]$ ./portal.pl
+
+     WELCOME TO THE PORTAL
+          1. LOGIN
+          2. CHANGE PASSWORD
+          3. NEW REGISTRATION
+          4. CLOSE THE PORTAL
+
+
+ enter your choice : 1
+
+ enter your username : tmohan
+
+ enter your password : Welcome123
+
+ INVALID CREDENTIALS
+[tmohan@cs2 ~]$ ./portal.pl
+
+     WELCOME TO THE PORTAL
+          1. LOGIN
+          2. CHANGE PASSWORD
+          3. NEW REGISTRATION
+          4. CLOSE THE PORTAL
+
+
+ enter your choice : 1
+
+ enter your username : tmohan
+
+ enter your password : Welcome456
+
+ login successful
+
+## feature 2 
+
+[tmohan@cs2 ~]$ ./portal.pl
+
+     WELCOME TO THE PORTAL
+          1. LOGIN
+          2. CHANGE PASSWORD
+          3. NEW REGISTRATION
+          4. CLOSE THE PORTAL
+
+
+ enter your choice : 2
+
+ CHANGE PASSWORD SCREEN
+ enter your username : tmohan
+
+ enter your old password : Welcome456
+
+ enter your new password : Welcome123
+
+ password changed successfully
+
+## feature 3 
+
+[tmohan@cs2 ~]$ ./portal.pl
+
+     WELCOME TO THE PORTAL
+          1. LOGIN
+          2. CHANGE PASSWORD
+          3. NEW REGISTRATION
+          4. CLOSE THE PORTAL
+
+
+ enter your choice : 3
+
+ NEW USER REGISTRATION SCREEN
+ enter your username : user1
+
+ enter your password : user1
+
+ user created successfully
+
+## feature 4 
+
+[tmohan@cs2 ~]$ ./portal.pl
+
+     WELCOME TO THE PORTAL
+          1. LOGIN
+          2. CHANGE PASSWORD
+          3. NEW REGISTRATION
+          4. CLOSE THE PORTAL
+
+
+ enter your choice : 4
+
+ CLOSING THE PORTAL 
+ [tmohan@cs2 ~]$ echo $?
+0
+[tmohan@cs2 ~]$ ./portal.pl
+
+     WELCOME TO THE PORTAL
+          1. LOGIN
+          2. CHANGE PASSWORD
+          3. NEW REGISTRATION
+          4. CLOSE THE PORTAL
+
+
+ enter your choice : 5
+EXITTING DUE TO INVALID OPTION 
+[tmohan@cs2 ~]$ echo $?
+1
