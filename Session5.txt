@@ -82,4 +82,29 @@ my $dsn3 = "DBI:Pg:database=testdb;host=10.103.34.20;port=5432" ;
 my $dbh = DBI->connect($dsn, $userid, $password, { RaiseError => 1 }) or die $DBI::errstr;
 
 
+# sample example for create database 
+
+## prepare a database handle
+
+my $dbh = DBI->connect($dsn,$username,$password,{ RaiseError => 0 }) or die $DBI::errstr;
+
+my $rv = $dbh->do("CREATE DATABASE TEST1") ;
+
+#print "\n the rv is $rv ";
+if($rv == 1)
+{
+        print "\n the database is created successfully" ;
+}
+else
+{
+        print "\n the database creation is failed " ;
+}
+print "\n" ;
+
+$dbh->disconnect();
+
+-- o/p for above code
+DBD::mysql::db do failed: Can't create database 'test1'; database exists at test.pl line 15.
+
+ the database creation is failed
 
