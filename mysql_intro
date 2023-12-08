@@ -1,0 +1,97 @@
+SQL NOSQL 
+
+SQL SYNTAX | RDMS => tables | Oracle Mysql Postgres .. 
+
+# NOSQL SYNTAX | OBJECTS | MongoDb  
+
+relational database management system 
+SQL --> syntax --> research paper 
+
+	Oracle --> Oracle SQL --> main implentation  
+	Mysql --> Mysql SQL 
+	SQLSERVER --> TSQL 
+
+
+LINUX ( ifconfig | ls | ll | cd  ) 
+	UBUNTU 
+	RHEL ( ll wont work ) som cass
+	ORACLE LINUX 
+	KALI LINUX 
+	SOLARIS  
+
+fried rice : ( stale rice + pepper + eggs + heat + oil) 
+	
+	--> chkn frd rice ( chicken + stale rice + pepper + heat + oil ) 
+	--> noodles ( 
+	--> vegetables 
+
+MYSQL : 
+
+data : 
+
+raw data 
+	1,mohan ,dkfghdfjk
+jkhnvi
+fhginf
+
+organised data :
+
+rollno,name,gender
+1,mohan,m,
+2,human,3
+
+
+create table sdata 
+(
+rollno INTGER,
+name varchar(30) ;
+);
+
+Install excel s/w  --> Open excel --> create sheet --> set column names --> write data into sheet 
+
+install db s/w --> obtain a connection --> create table with column names --> insert data 
+
+1) mysql-community-server-8.0.34-1.el6.x86_64
+2) connected via sqlyog 
+3) 
+
+CRUD Opertaions 
+
+create ==> INSERT 
+read  ==> SELECT 
+update  ==> UPDATE 
+delete ==> DELETE 
+
+
+-- create 
+CREATE TABLE traineedb.durgendra_data
+(
+  rollno INT ,
+  NAME VARCHAR(20) 
+) ; 
+
+-- read 
+SELECT * FROM traineedb.durgendra_data ; 
+SELECT rollno,NAME FROM traineedb.durgendra_data WHERE rollno=2; 
+
+
+-- create 
+
+INSERT INTO traineedb.durgendra_data(rollno,NAME) VALUES ( 1 , 'mohan') ;
+INSERT INTO traineedb.durgendra_data(rollno,NAME) VALUES ( 2 , 'dk') ;
+INSERT INTO traineedb.durgendra_data(rollno,NAME) VALUES ( 3 , 'ajay') ;
+INSERT INTO traineedb.durgendra_data(rollno,NAME) VALUES (1,'ravi') ;
+
+-- update 
+
+UPDATE traineedb.durgendra_data SET NAME='mohan chand' WHERE NAME='mohan' ;
+UPDATE traineedb.durgendra_data SET NAME='mohan chand' WHERE rollno=1  ;
+UPDATE traineedb.durgendra_data SET NAME='mohan chand' ; 
+
+--DELETE 
+
+DELETE FROM traineedb.durgendra_data WHERE rollno = 2 ; 
+
+-- CRUD OPERATIONS
+
+-- drop table traineedb.durgendra_data_2 ;
